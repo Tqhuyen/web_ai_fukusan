@@ -1,0 +1,19 @@
+<!doctype html>
+<title>Demo</title>
+<h2>DJTMEPHUCSAN</h2>
+<form method="post" action="/" enctype="multipart/form-data">
+    <dl>
+		<p>
+            <input type="file" name="file" autocomplete="off" required>
+		</p>
+    </dl>
+    <p>
+        <input type="submit" value="Submit">
+	</p>
+</form>
+{% if file%}
+    <div>
+        <img src="{{ file }}" alt="image">
+        <p>{{ text_result }}</p>
+    </div>
+{% endif %}
